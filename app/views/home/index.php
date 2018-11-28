@@ -1,0 +1,1 @@
+    <h1>ini halaman <?= $data['judul'];?></h1>
