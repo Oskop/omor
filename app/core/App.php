@@ -6,7 +6,7 @@
 class App
 {
 	//controller default
-	protected $controller = 'Login';
+	protected $controller = 'home';
 	//method default
 	protected $method = 'index';
 	//parameter default

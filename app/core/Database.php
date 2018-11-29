@@ -1,6 +1,6 @@
 <?php
 
-class Database
+class Database 
 {
     private $host = DB_HOST;
     private $pw = DB_PASS;
@@ -12,7 +12,7 @@ class Database
 
     public function __construct()
 	{
-        $db = 'mysql:host=' . $this->host . ';dbname=' . $this->name;
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->name;
         
         $option = [
             PDO::ATTR_PERSISTENT =>true,
@@ -20,7 +20,7 @@ class Database
         ];
 
 		try{
-			$this->dbh = new PDO($db,$this->user,$this->pw);
+			$this->dbh = new PDO($dsn,'root',$this->pw,$option);
 		}catch(PDOException $e){
 			die($e->getMessage());
 		}
@@ -54,21 +54,30 @@ class Database
         $this->stmt->bindValue($param,$value,$type);
     }
 
-    public function execute()
+    public function eksekusi()
     {
         $this->stmt->execute();
     }
 
     public function resultSet()
     {
-        $this->execute();
+        $this->eksekusi();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function single()
     {
-        $this->execute();
+        $this->eksekusi();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
+    }
+
+    public function insertId()
+    {
+        
+    }
 }

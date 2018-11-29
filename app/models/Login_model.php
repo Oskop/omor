@@ -1,16 +1,26 @@
 <?php
 
-class Login_model extends My_
+class Login_model
 {
-    private $db;
 
     public function __construct()
     {
         $this->db = new Database;
     }
 
-    public function login()
+    public function getLoginByName($nama,$password)
     {
-        # code...
+        $this->db->query('SELECT * FROM unpw WHERE username = :nama');
+        $this->db->bind('nama',$nama);
+        $result =  $this->db->single();
+        if($this->db->rowCount() == 1)
+        {
+            $pwHash = $result['password'];
+            if(password_verify($password,$pwHash)){
+                
+                return true;
+            }
+        }
+        return false;
     }
 }

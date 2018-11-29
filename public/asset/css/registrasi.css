@@ -1,0 +1,103 @@
+hr{
+	margin-top: 20px;
+	color: white;
+}
+td,tr{
+	padding-bottom: 8px;
+	color: white;
+	font-family: "Arial",sans-serif;
+	font-size: 11pt;
+}
+label{
+	color: white;
+	font-family: "Arial",sans-serif;
+	font-size: 11pt;
+}
+select{
+	height: 30px;
+	margin:0;
+	font-size: 11pt;
+	font-family: "Arial",sans-serif;
+	border: 1px white solid;
+	border-radius: 3px;
+	background-color: white;
+}
+input{
+	padding: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-family: "Arial",sans-serif;
+	font-size: 11pt;
+
+}
+.box{
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 650px;
+}
+.box-header{
+	z-index: 3;
+	height: 50px;
+	background: rgb(255,10,10);
+	text-align: center;
+	line-height: 50px;
+	font-family: "Arial",sans-serif;
+	color: white;
+	font-size: 20pt;
+	font-weight: bold;
+	box-shadow: 1px 3px 2px gray;
+	border-radius: 50px;
+	margin-bottom: 8px;
+}
+.box-body{
+	z-index: 2;
+	width: 550px;
+	margin: 0 auto;
+	padding:25px;
+	background:rgb(160,160,160);
+	border-radius: 20px;
+	box-shadow: 1px 3px 2px gray;
+
+}
+.box-body a{
+	text-decoration: none;
+	color: white;
+	font-family: "Arial",sans-serif;
+	font-size: 12pt;
+}
+.input{
+	width: 330px;
+	margin: 0;
+	border: 1px white solid;
+	border-radius: 8px;
+}
+.box-body form{
+	margin-top: 0px;
+}
+.box-body form .btn{
+	position: relative;
+	top: 5px;
+	left: 140px;
+	width: 80px;
+	height: 30px;
+	background-color: red;
+	color: white;
+	font-family: "Arial",sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	border: 1px white solid;
+	border-radius: 30px;
+}
+.box-body form .btn:hover{
+	background-color: white ;
+	color: red;
+	border:1px red solid;
+}
+.box-tahun{
+	width: 5px;
+	height: 10px;
+	font-size: 12pt;
+	text-align: center;
+	padding-right: 0px;
+	padding-left: 0px;
+}

@@ -1,6 +1,6 @@
 <?php
 
-define('baseurl','http://localhost/phpmvc/public/');
+define('baseurl','http://localhost/omor/public/');
 
 
 //Database
